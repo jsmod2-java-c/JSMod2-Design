@@ -98,3 +98,7 @@ public class ExampleListener implements Listener{
 }
 
 ```
+
+* 指令权限控制
+
+实现了指令通过玩家权限来控制的方案(此功能在测试阶段)
