@@ -15,6 +15,9 @@ JSM底层采用了JSMod2协议与ProxyHandler进行对接
 内部最主要的特征是挂接注册机制
 
 ![main](main.png)
+##### 图中少了个部分，ApiIdMapping的对象来源是当发生事件时，会将事件对象和其中的其他对象加入到这个表里(同时随机生成id，然后一起把id发出去)
+##### 然后下一次发出去的对象重新发个修改的请求，也会顺带着之前发给它的ID，proxyHandler那边就通过这个ID找到那个对象，然后进行设置，这也是对于sendObject里的IdMapper作用的解释
+
 如果可以通过springboot
 
 说明是有效的http协议，会将jsmod2协议串传输到协议翻译器
