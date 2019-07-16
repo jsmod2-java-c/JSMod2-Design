@@ -8,7 +8,7 @@ JSM底层采用了JSMod2协议与ProxyHandler进行对接
 > JSMod2的工作原理图
 内部最主要的特征是挂接注册机制
 
-[main](main.png)
+![main](main.png)
 如果可以通过springboot
 
 说明是有效的http协议，会将jsmod2协议串传输到协议翻译器
