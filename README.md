@@ -1,4 +1,7 @@
 # JSMOD2 架构论 
+
+Jsmod2的整个架构极其简单，该文章为了方便其他开发者贡献代码和维护项目
+
 > 总论
 
 JSMod2(JSM)是一款基于sMod2的java插件开发框架,JSM作为服务的形式与sMod2对接,sMod2的链接JSM的客户端是ProxyHandler，在JSM-PH-SMOD2组成的跨java-c#语言开发框架建立起来，同时，内部实行了挂接注册机制来定位api对象.
