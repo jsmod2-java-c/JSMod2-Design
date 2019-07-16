@@ -56,3 +56,30 @@ java端称为jsmod2-server，同时也可以叫做jsmod2，由core,api,protocol,
 * protocol 包含了定义的数据包，基于jsmod2-protocol的定义，适配于proxyHandler
 
 * child是Server的子类，RegisterTemplate的子类等，负责jsmod2的启动
+
+> jsmod2的设计优势
+  
+* 方便兼容机制
+
+可以设置MultiAdmin的log文件，服务端可以监听log更新并输出在控制台，因此只需要管理Jsmod2的后台即可
+并且支持迭代log文件处理和高效断枝算法，当产生最新log文件，jsmod2会自动替换到最新的配置文件去监听
+
+* 自动注册机制
+
+jsmod2支持自动注册监听器，加入@EnableRegister即可实现自动注册，但是插件必须是打包成jar包的文件
+
+* 无配置文件模式
+
+废除plugin.yml,实现@Main注解注册主类，类似于smod2的插件主类注册方式
+
+* 配置文件框架
+
+支持3种主流配置文件和一个服务端自带的配置文件的系统
+
+* 高速处理算法
+
+每秒处理20000条以上请求，并不丢包，设计的缓冲字节算法，保证了不会出现丢包错误
+
+* Simple Web API
+
+可以通过在web发送jsmod2请求串(带着http协议),来获取数据json，方便设计网站联通服务端，以网站形式反映服务器数据
