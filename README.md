@@ -44,3 +44,15 @@ ProxyHandler解析器会将数据再解析为jsmod2协议
 ApiIdMapping是维护的对象映射表，会通过发包的uuid从里面查到对象并在子处理器操作,当jsmod2触发事件时候，会通过ProxyHandler代理解析器解析，然后发送到jsmod2的协议翻译器
 
 注册时将CommandHandler注册进去，如果Smod2调用指令，则触发CommandHandler，然后发包
+
+> jsmod2-server的组成
+
+java端称为jsmod2-server，同时也可以叫做jsmod2，由core,api,protocol,child组成
+
+* core包包含了jsmod2的核心部分，如一些模板，基本类，工具框架，协议处理器，http处理器等,为了方便移植和扩展功能
+
+* api包含了基本的数据类(供插件开发调用的api),可以发送数据和封装等
+
+* protocol 包含了定义的数据包，基于jsmod2-protocol的定义，适配于proxyHandler
+
+* child是Server的子类，RegisterTemplate的子类等，负责jsmod2的启动
