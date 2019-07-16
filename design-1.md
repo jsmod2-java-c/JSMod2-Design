@@ -7,6 +7,7 @@ JSM底层采用了JSMod2协议与ProxyHandler进行对接
 (参见[Protocol]( [https://github.com/jsmod2-java-c/Jsmod2_protocol](https://github.com/jsmod2-java-c/Jsmod2_protocol) )，实质上是JSON数据串,最终会被实例化为一个具体的数据对象,关于JSM协议,参见GitHub.
 > JSMod2的工作原理图
 内部最主要的特征是挂接注册机制
+
 [main](main.png)
 如果可以通过springboot
 
