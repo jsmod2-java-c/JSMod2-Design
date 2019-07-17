@@ -183,4 +183,4 @@ name(a,a_ptr)
 
 > ProxyHandler 代理管制
 
-代理管制是使得Jsmod2起作用的主要组件,代理器虽然代码很少但是起到重要的作用，负责监听smod2，并发布数据到jsmod2，同时监听jsmod2，将jsmod2数据发布到smod2，实现了数据互通
+代理管制是使得Jsmod2起作用的主要组件,代理器虽然代码很少但是起到重要的作用，负责监听smod2，并发布数据到jsmod2，同时监听jsmod2，将jsmod2数据发布到smod2，实现了数据互通,并可以维护api表,快速查取api
