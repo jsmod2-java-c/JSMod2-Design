@@ -9,3 +9,8 @@ Jsmod2 Protocol v5架构中
                     .appendId(Lib.PLAYER_ID,Guid.NewGuid().ToString(),ev.Player) //玩家ID设置，对应指定玩家对象
                     .appendId(Lib.PLAYER_EVENT_SCPDATA_ID,Guid.NewGuid().ToString(),ev.Player.Scp079Data) //玩家的SCPDATA的ID设置 对应SCPDATA对象
                     
+ JSmod2的PlayerEvent获取
+ e.getPlayer() 这个是复杂对象，所以直接获取，没有GetPacket传递
+ e.getPlayer().getName() 这个是基本类型，通过GetPacket获取，中间传输用到了ApiId
+ e.getPlayer().getScpData() 复杂对象，直接获取，没有GetPacket传递
+                    
