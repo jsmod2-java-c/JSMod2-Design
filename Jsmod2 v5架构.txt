@@ -1,0 +1,11 @@
+Jsmod2 Protocol v5架构中
+
+1.摒弃了事件序列化，统一使用GetPacket获取事件信息和对象信息，事件请求只是传递ApiId
+2.除了复杂对象外，枚举值对象和基本类型采用GetPacket获取，复杂对象在事件发送过程中已经确定了它的身份(apiId)
+3.proxyHandler在事件触发时，只设置字段链(id的最终位置),UUID,映射对象
+  如，触发PlayerJoinEvent
+    new IdMapping()
+                    .appendId(Lib.ID,Guid.NewGuid().ToString(),ev) //事件根ID设置，对应指定事件对象
+                    .appendId(Lib.PLAYER_ID,Guid.NewGuid().ToString(),ev.Player) //玩家ID设置，对应指定玩家对象
+                    .appendId(Lib.PLAYER_EVENT_SCPDATA_ID,Guid.NewGuid().ToString(),ev.Player.Scp079Data) //玩家的SCPDATA的ID设置 对应SCPDATA对象
+                    
