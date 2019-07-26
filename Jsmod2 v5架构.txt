@@ -13,4 +13,6 @@ Jsmod2 Protocol v5架构中
  e.getPlayer() 这个是复杂对象，所以直接获取，没有GetPacket传递
  e.getPlayer().getName() 这个是基本类型，通过GetPacket获取，中间传输用到了ApiId
  e.getPlayer().getScpData() 复杂对象，直接获取，没有GetPacket传递
+
+如果是数组，比如Player[]这种，第一次获取时候通过GetPacket得到数组，第二次获取直接获得就行
                     
