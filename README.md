@@ -184,3 +184,9 @@ name(a,a_ptr)
 > ProxyHandler 代理管制
 
 代理管制是使得Jsmod2起作用的主要组件,代理器虽然代码很少但是起到重要的作用，负责监听smod2，并发布数据到jsmod2，同时监听jsmod2，将jsmod2数据发布到smod2，实现了数据互通,并可以维护api表,快速查取api
+
+> New 事件流机制
+
+最新设计的反射型数据传输器，可以动态的发布不同类型和不同名称数据，但不需要创建额外的类，分为EventValueSetStream和EventValueGetStream，在C#中通过反射实现，对应了SimpleHandler,统一使用id号 180 181,在其发明后，将在未实现的api中广泛使用
+
+> ProxyHandler 代理管制
