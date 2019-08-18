@@ -188,5 +188,3 @@ name(a,a_ptr)
 > New 事件流机制
 
 最新设计的反射型数据传输器，可以动态的发布不同类型和不同名称数据，但不需要创建额外的类，分为EventValueSetStream和EventValueGetStream，在C#中通过反射实现，对应了SimpleHandler,统一使用id号 180 181,在其发明后，将在未实现的api中广泛使用
-
-> ProxyHandler 代理管制
